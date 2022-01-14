@@ -6,12 +6,14 @@ class LogMethodTest extends AnyFlatSpec {
 
   "Log" should "be valid" in{
     val result =new LogMethod()
-    assert("This is my first LOG INFO" == result.log("This is my first LOG"))
+
+    assert("[INFO]:This is my first LOG" == result.log(message="This is my first LOG"))
 
   }
+
   "Log" should "be invalid" in {
     val result = new LogMethod()
-    assert(!("This is my first LOG " == result.log("This is my first LOG")))
+    assert(!("[This is my second LOG]:INFO" == result.log(message="This is my first LOG")))
   }
 
   }

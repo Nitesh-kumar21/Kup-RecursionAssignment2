@@ -17,5 +17,4 @@ class TailFactorialTest extends AnyFlatSpec {
     val result: BigInt=obj.anotherFactorial(-1)
     assert(result==1)
   }
-
 }
